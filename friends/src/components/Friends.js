@@ -28,7 +28,7 @@ const Friends = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axiosWithAuth
+    axiosWithAuth()
       .post("/friends", friend)
       .then((res) => {
         setList(res.data);
@@ -45,7 +45,7 @@ const Friends = () => {
   };
 
   return (
-    <>
+    <section className='pg friends-pg'>
       <form onSubmit={handleSubmit}>
         <input
           type='text'
